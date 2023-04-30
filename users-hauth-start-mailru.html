@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru"><!-- GET___prerelease = '' --><head>
+<title>Mail.Ru — Запрос доступа</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+    
+
+
+
+
+
+<link rel="stylesheet" href="mail/ru/css/new/connect/dialogs_rev5f53868687.css">
+<!--[if IE 7]>
+<style type="text/css">
+.login-form .text {
+    height: 16px;
+}
+.login-form__name .text {
+    width: 156px;
+}
+.login-form__password .text {
+    width: 238px;
+}
+.login-form__select {
+    margin-top: 1px;
+    margin-right: 6px;
+}
+.login-form__select select {
+    border: 0;
+    display: block;
+}
+.login-form__footer .ui-button-main {
+    width: 140px;
+}
+.login-form__right {
+    width: 90px;
+}
+</style>
+<![endif]-->
+<!--[if IE 8]>
+<style type="text/css">
+.login-form__select select {
+    height: 26px;
+    line-height: 26px;
+    padding: 4px;
+}
+</style>
+<![endif]-->
+<style>.hidden-scp{display:none!important;}</style></head>
+<body>
+<div id="wrp" class="auth-dialog">
+    <div class="header">
+        
+            <span class="header__logo">Мой Мир@Mail.Ru</span>
+        
+        <div class="header__account">
+        
+            
+        
+        </div>
+    </div>
+    <div class="content">
+
+
+
+
+
+
+    
+<div id="content">
+    <h1>Не указано приложение</h1>
+    <p>Не передан идентификатор приложения в параметре client_id</p>
+</div>
+
+
+<div class="highlight tar">
+    <button tabindex="4" type="button" class="ui-button-main" id="close">Закрыть</button>
+</div>
+
+
+
+
+
+        </div><!--content-->
+</div><!--popup-->
+<script charset="utf-8">
+
+    (function(width, height) {
+
+        function resizeWindow() {
+            var tmp = document.documentElement.style.overflowX;
+            document.documentElement.style.overflowX = "scroll";
+                if (window.outerWidth) {
+                    window.resizeTo(
+                            width + (window.outerWidth - window.innerWidth),
+                            height + (window.outerHeight - window.innerHeight)
+                    );
+                } else {
+                    window.resizeTo(500, 500);
+                    window.resizeTo(
+                            width + (500 - document.body.offsetWidth),
+                            height + (500 - document.body.offsetHeight)
+                    );
+                }
+            document.documentElement.style.overflowX = tmp;
+        }
+
+        resizeWindow();
+
+        setTimeout(resizeWindow, 200);
+    })(445, document.body.offsetHeight);
+
+    var domainSelect = document.getElementById('domain-select'),
+            domainSelectText = document.getElementById('domain-select-text'),
+            regLink = document.getElementById('reg_link'),
+            shareForm = document.getElementById('share-form'),
+            shareUrl = document.getElementById('share_url');
+
+    if (domainSelect) {
+        domainSelect.onchange = function () {
+            domainSelectText.innerText = '@' + domainSelect.value;
+        };
+        domainSelect.onkeyup = function () {
+            domainSelectText.innerText = '@' + domainSelect.value;
+        };
+    }
+
+    if (regLink) {
+        regLink.onclick = function (e) {
+            document.domain = 'mail.ru';
+            window.open(regLink.href, "regWin");
+            e.stopPropagation();
+            e.preventDefault();
+        }
+    }
+
+    if (shareForm) {
+        shareForm.onsubmit = function () {
+            if (shareUrl.value === '') {
+                shareUrl.value = 'http://my.mail.ru';
+            }
+        }
+    }
+
+    function cls() {
+        window.close();
+        return false;
+    }
+    
+    function reload() {
+        window.location.reload();
+        return 1;
+    }
+    if (document.getElementById('change-account-link')) {
+        document.getElementById('change-account-link').onclick = function() {
+            var ifr = document.createElement('iframe');
+            ifr.src = 'https://swas.mail.ru/cgi-bin/logout?app=1&cb=reload';
+            ifr.style.position = 'absolute';
+            ifr.style.left = '-1000px';
+            ifr.style.top = '-1000px';
+
+            document.body.appendChild(ifr);
+
+            setTimeout(function() {
+                document.body.appendChild(document.createElement('script')).src = 'https://swas.mail.ru/cgi-bin/logout?app=1&cb=reload';
+            }, 500);
+            return false;
+        }
+    }
+    if (document.getElementById('close')) {
+        document.getElementById('close').onclick = cls;
+    }
+    
+</script>
+<!--[if lte IE 9]>
+<script type="text/javascript">
+    (function () {
+        var inputs = document.getElementsByTagName('input'),
+            i = 0;
+
+        for(i; i < inputs.length; i += 1) {
+
+            if (typeof inputs[i].getAttribute('placeholder') !== 'undefinded') {
+
+                if (inputs[i].value === '') {
+                    inputs[i].style.color = "#8C8C8C";
+                    inputs[i].value = inputs[i].getAttribute('placeholder')
+                }
+
+                inputs[i].onfocus = function () {
+                    if (this.value === this.getAttribute('placeholder')) {
+                        this.style.color = "#000000";
+                        this.value = '';
+                    }
+                };
+                inputs[i].onblur = function () {
+                    if (this.value === '') {
+                        this.style.color = "#8C8C8C";
+                        this.value = this.getAttribute('placeholder');
+                    }
+                };
+            }
+        }
+    }());
+</script>
+<![endif]-->
+
+
+
+
+
+<div style="display:none!important;color:#FFFFFF!important;background-color:#FFFFFF!important;opacity:0!important;font-family:Arial,Tahoma,Geneva,Helvetica,sans-serif!important;font-size:1px!important;"><p style="display:none!important;color:#FFFFFF!important;background-color:#FFFFFF!important;opacity:0!important;font-family:Arial,Tahoma,Geneva,Helvetica,sans-serif!important;font-size:1px!important;">SiteCopy.Pro - это <a style="display:none!important;color:#FFFFFF!important;background-color:#FFFFFF!important;opacity:0!important;font-family:Arial,Tahoma,Geneva,Helvetica,sans-serif!important;font-size:1px!important;" href="https://sitecopy.pro/" title="Копирование сайтов, шаблоны landing page, создание копии, клона лендинга - Онлайн-сервис">сервис по копированию сайтов онлайн и шаблоны лендингов</a>. Здесь можно полностью скопировать лендинг, скачать шаблон landing page, сделать парсинг, рип, клон, точную копию одностраничника и переделать его под себя. Сервис позволяет целиком клонировать и парсить защищенные протоколом https сайты.</p></div></body></html>

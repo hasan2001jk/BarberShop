@@ -1,0 +1,56 @@
+/*
+ $color: #bda180;
+ $white:#FFFFFF;
+ $color_o_1: rgba(189,161,128,1);
+ $color_o_06: rgba(189,161,128,0.6);
+ $color_o_05: rgba(189,161,128,0.5);
+ $color_o_04: rgba(189,161,128,0.4);
+ $color_o_015: rgba(189,161,128,0.15);
+ .g-article-offered__button {
+ color: $color !important;
+ border: 0.07143em solid $color_o_05;
+ }
+ .g-article-offered__button:hover {
+ border: 0.07143em solid $color_o_1;
+ }
+ .g-page-article .g-article-nav a {
+ color: $color;
+ border: 0.07143em solid $color_o_06;
+ }
+ .g-page-article .g-article-nav a:hover {
+ border: 0.07143em solid $color_o_1;
+ }
+ .g-img__count {
+ color: $white;
+ }
+ .g-button { 
+ color: $white !important;
+ }
+ .g-form-control-select+.chosen-container.chosen-with-drop .chosen-drop .chosen-results li.highlighted, .g-form-control-select+.chosen-container.chosen-with-drop .chosen-drop .chosen-results li.result-selected {
+ background: $color;
+ }
+ #ui-datepicker-div.ui-datepicker {
+ border: 1px solid $color_o_06 !important;
+ box-shadow: 0 0 3px 0 $color_o_015 !important;
+ }
+ #ui-datepicker-div.ui-datepicker table.ui-datepicker-calendar tr td a.ui-state-default.ui-state-highlight {
+ color: $color !important;
+ }
+ #ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover {
+ border-color: $color_o_06 !important;
+ }
+ #ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:hover:before {
+ border-color: transparent $color transparent transparent !important;
+ }
+ #ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover:hover {
+ border-color: $color_o_06 !important;
+ }
+ #ui-datepicker-div.ui-datepicker .ui-datepicker-header .ui-datepicker-next:hover:hover:before {
+ border-color: transparent transparent transparent $color !important;
+ }
+ .g-form-control-calendar .ui-datepicker-trigger:before {
+ background: url("../../../../t/v493/images/mosaic/calendar.svg") 50% 50% no-repeat !important;
+ }
+ input,textarea{
+ outline:none;
+ }*/
